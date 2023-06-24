@@ -1,3 +1,5 @@
+const express = require("express");
+const cors = require("cors");
 const puppeteer = require("puppeteer");
 
 async function getResult(url) {
@@ -26,8 +28,16 @@ async function getResult(url) {
   return { imagenya, jawabannya };
 }
 
-module.exports = async (req, res) => {
-  const url = 'https://logoquiz.net'; // Ganti dengan URL yang diinginkan
+const app = express();
+
+app.use(cors());
+
+app.listen(4000, () => {
+  console.log("Server Sedang Berjalan Di Port 4000");
+});
+
+app.get('/logoquiz', async (req, res) => {
+  const url = 'https://logoquiz.net/'; // Ganti dengan URL yang diinginkan
   const gets = await getResult(url);
   res.json(gets);
-};
+});
