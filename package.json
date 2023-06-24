@@ -1,0 +1,25 @@
+{
+  "name": "logoquizamf",
+  "version": "1.0.0",
+  "description": "Scrape logoquiz.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arimaulanafirmansyah/logoquiz-amf.git"
+  },
+  "keywords": [
+    "logoquiz"
+  ],
+  "author": "Ari Maulana Firmansyah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arimaulanafirmansyah/logoquiz-amf/issues"
+  },
+  "homepage": "https://github.com/arimaulanafirmansyah/logoquiz-amf#readme",
+  "dependencies": {
+    "puppeteer": "^20.7.3"
+  }
+}
